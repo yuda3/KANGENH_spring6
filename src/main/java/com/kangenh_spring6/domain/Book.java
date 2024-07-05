@@ -1,14 +1,19 @@
 package com.kangenh_spring6.domain;
 
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
 @Setter
 @Entity
+@EqualsAndHashCode(of = "id")
+@ToString
 public class Book {
 
     @Id
@@ -20,6 +25,7 @@ public class Book {
     @ManyToMany
     @JoinTable(name="author_book", joinColumns = @JoinColumn(name="book_id"),
     inverseJoinColumns = @JoinColumn(name="author_id"))
-    private Set<Author> authors;
+    private Set<Author> authors = new HashSet<>();
+
 
 }

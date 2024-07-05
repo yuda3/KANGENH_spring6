@@ -26,6 +26,6 @@ public class Publisher {
     private String zip;
 
     @OneToMany
-    private Set<Book> books = new HashSet<Book>();
+    private Set<Book> books = new HashSet<>();
 }
 

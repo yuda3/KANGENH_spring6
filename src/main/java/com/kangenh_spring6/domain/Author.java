@@ -13,7 +13,6 @@ import java.util.Set;
 @Setter
 @Entity
 @EqualsAndHashCode(of = "id")
-@ToString
 public class Author {
 
     @Id
@@ -24,4 +23,5 @@ public class Author {
 
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books = new HashSet<>();
+
 }

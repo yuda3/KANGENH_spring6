@@ -13,7 +13,6 @@ import java.util.Set;
 @Setter
 @Entity
 @EqualsAndHashCode(of = "id")
-@ToString
 public class Publisher {
 
     @Id
@@ -27,5 +26,18 @@ public class Publisher {
 
     @OneToMany(mappedBy = "publisher")
     private Set<Book> books = new HashSet<>();
+
+    @Override
+    public String toString() {
+        return "Publisher{" +
+                "id=" + id +
+                ", publisherName='" + publisherName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                ", books=" + books +
+                '}';
+    }
 }
 

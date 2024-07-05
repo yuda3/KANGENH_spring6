@@ -13,7 +13,6 @@ import java.util.Set;
 @Setter
 @Entity
 @EqualsAndHashCode(of = "id")
-@ToString
 public class Book {
 
     @Id
@@ -31,5 +30,13 @@ public class Book {
     @ManyToOne
     private Publisher publisher;
 
-
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", authors=" + authors +
+                '}';
+    }
 }

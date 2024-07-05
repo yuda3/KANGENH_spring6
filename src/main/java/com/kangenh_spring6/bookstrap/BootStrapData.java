@@ -18,7 +18,7 @@ public class BootStrapData implements CommandLineRunner {
     private final PublisherRepository publisherRepository;
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         Author eric = new Author();
         eric.setFirstName("Eric");
         eric.setLastName("Evans");

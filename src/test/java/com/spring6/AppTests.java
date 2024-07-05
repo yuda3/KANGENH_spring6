@@ -1,10 +1,10 @@
-package com.kangenh_spring6;
+package com.spring6;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class KangenhSpring6ApplicationTests {
+class AppTests {
 
     @Test
     void contextLoads() {
